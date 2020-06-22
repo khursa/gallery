@@ -1,0 +1,61 @@
+/* Contact block 1 */
+@mixin font-style ($color, $font-family, $font-size, $font-weight) {
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+.contact {
+  height: 200px;
+  background-image: url("../imgs/bg-contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 55px;
+  h3 {
+    @include font-style (#fff, "Open Sans", 20px, 400);
+    width: 270px;
+    opacity: 0.7; 
+    margin: 0 auto; 
+  }
+  .contact-us-btn {
+    @include font-style (#fff, "Open Sans", 16px, 400);
+    display: block;
+    width: 140px;
+    height: 37px;
+    border-radius: 18px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    opacity: 0.7;
+    margin: 30px auto 0 auto;
+    &:hover {
+      box-shadow: 0 0 10px rgba(225, 225, 225, 0.7);
+      transform: scale(1.05);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Contact block 2 */
+.contact-us {
+  width: 100%;
+  padding-top: 50px;
+  &__title {
+    @include font-style (#333b46, "Source Sans Pro", 20px, 400);
+    width: 300px;
+    letter-spacing: 4px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__title-text {
+    @include font-style (#81868e, "Open Sans", 14px, 400);
+    width: 460px;
+    line-height: 25px;
+    margin: 35px auto 50px auto;
+    text-align: center;
+  }
+  &__map {
+    height: 440px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,77 @@
+@mixin font-style ($color, $font-family, $font-size, $font-weight) {
+  color: $color;
+  font-family: $font-family; 
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+.testimonials {
+  min-height: 650px;
+  background: #f3f3f3;
+  padding: 75px 0 0 0;
+  &__title {
+    @include font-style (#333b46, "Source Sans Pro", 20px, 400);
+    width: 300px;
+    letter-spacing: 4px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__title-text {
+    @include font-style (#81868e, "Open Sans", 14px, 400);
+    width: 460px;
+    line-height: 25px;
+    margin: 35px auto 50px auto;
+    text-align: center;
+  }
+  .comments {
+    max-width: 1170px;
+    margin: 0 auto; 
+    min-height: 315px;
+    background: #fff;
+    &__slide {
+      padding: 50px 95px 0 95px;
+      width: 100%;
+      outline: none;
+      cursor: pointer;
+      img {
+        display: block;
+        float: left;
+        width: 135px;
+        height: 135px;
+      }
+      &-info {
+        vertical-align: top;
+        padding-top: 10px;
+        width: 77%;
+        float: right;
+        p {
+          @include font-style (#81868e, "Open Sans", 16px, 400);
+          line-height: 28px;
+          word-wrap: break-word;
+          width: 100%;
+        }
+        h3 {
+          @include font-style (#19bd9a, "Open Sans", 16px, 700);
+          margin-top: 15px;
+        }
+        h4 {
+          @include font-style (#464646, "Open Sans", 14px, 400);
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .slick-dots {
+    position: inherit;
+  }
+  @media all and (max-width: 950px) {
+    .comments__slide img {
+      margin: 0 auto;
+      float: none;
+    }
+    .comments__slide-info {
+      float: none;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@mixin font-style ($color, $font-family, $font-size, $font-weight) {
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size; 
+  font-weight: $font-weight;
+}
+@import 'header.scss';
+@import 'portfolio.scss';
+@import 'team.scss';
+@import 'contact-block1.scss';
+@import 'testimonials.scss';
+@import 'footer.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 

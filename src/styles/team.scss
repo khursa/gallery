@@ -1,0 +1,66 @@
+@mixin font-style ($color, $font-family, $font-size, $font-weight) {
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight; 
+}
+.team {
+  padding: 77px 0 0 0;
+  min-height: 770px;
+  &__title {
+    @include font-style (#333b46, "Source Sans Pro", 20px, 400);
+    width: 300px;
+    letter-spacing: 4px;
+    margin: 0 auto;
+    text-align: center;
+    &-text {
+      @include font-style (#81868e, "Open Sans", 14px, 400);
+      width: 460px;
+      line-height: 25px;
+      margin: 35px auto 50px auto;
+      text-align: center;
+    }
+  } 
+  &__carousel {
+    max-width: 1100px;
+    margin: 0 auto;
+    &-worker {
+      width: 1030px;
+      height: 365px;
+      margin-bottom: 50px;
+      outline: none;
+      &:hover {
+        cursor: pointer;
+      }
+      .worker__photo {
+        float: left;
+      }
+      .worker__info {
+        width: 45%;
+        text-align: right;
+        float: right;
+        &-general {
+          height: 42px;
+          border-right: 4px solid #19bd9a;
+          padding-right: 42px;
+          margin-bottom: 30px;
+          margin-top: 25px;
+          h3 {
+            @include font-style (#464646, "Open Sans", 20px, 400);
+          }
+          h4 {
+            @include font-style (#81868e, "Source Sans Pro", 14px, 300);
+            font-style: italic;
+            text-transform: uppercase;
+          }
+        }
+        p {
+          @include font-style (#81868e, "Open Sans", 14px, 400);
+          line-height: 25px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}
